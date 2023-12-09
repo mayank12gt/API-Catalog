@@ -5,7 +5,7 @@ import CategoryItem from './CategoryItem'
 function Categories(props) {
     const categories = props.categories
   return (
-    <Box><Heading ml={3} color={'blue.900'} size={'md'} fontWeight={'semibold'}> Categories </Heading>
+    <Box><Heading ml={3} color={'green.900'} size={'md'} fontWeight={'semibold'}> Categories </Heading>
     { categories.map((category)=>{
      return <CategoryItem category={category}/>
     }) }</Box>

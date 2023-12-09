@@ -3,12 +3,13 @@ import Navbar from './components/Navbar'
 import { Box, Flex, VStack } from '@chakra-ui/react'
 import Sidebar from './components/Sidebar'
 import axios from 'axios'
+import Content from './components/Content'
 function App() {
-  const [categories, setCategories] = useState(['All'])
+  const [categories, setCategories] = useState([])
   useEffect(()=>{
      getCategories()
   },[])
-  
+
   const getCategories = ()=>{
     console.log('sending request')
     axios.get('https://api.publicapis.org/categories').
@@ -17,12 +18,17 @@ function App() {
     }).
     catch(err=>console.log('error'))
   }
+
   return (
-    <Flex>
+    <Flex   alignItems={'stretch'}
+    overflowY={'hidden'}
+    >
       <Sidebar categories={categories}/>
-      <Flex flex={1} direction={'column'}>
+      <Flex    flex={1} direction={'column'}>
      <Navbar categories={categories}/>
-     <Box>fas</Box>
+    
+     <Content/>
+    
      </Flex>
     </Flex>
   )
