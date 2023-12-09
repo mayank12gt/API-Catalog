@@ -5,9 +5,8 @@ import APIContainer from './APIContainer'
 
 function Content() {
   return (
-    <VStack h={'100%'}   >
+    <VStack bg={'green'} h={'100%'}   >
         <Searchbar/>
-       
         <APIContainer/>
         
     </VStack>

@@ -1,4 +1,4 @@
-import { Box, Card, CardBody, Flex, VStack } from '@chakra-ui/react'
+import { Box, Card, CardBody, Flex, Heading, VStack } from '@chakra-ui/react'
 import React, { useEffect, useState } from 'react'
 import APICard from './APICard'
 import axios from 'axios'
@@ -22,23 +22,20 @@ function APIContainer() {
     }
 
   return (
-   <VStack w={'80%'}
-    overflowY={'auto'}
-   h={'70vh'}
+   
     
-    css={{
-        '&::-webkit-scrollbar': {
-          display: 'none', // Hide the scrollbar for WebKit browsers (Chrome, Safari, etc.)
-        },
-      }}>
-    <Flex   flexWrap={'wrap'} flexDirection={{base:'column', md:'row'}}  gap={2} justify={'space-between'}   mt={2}
-     w={'100%'} >
+   
+    <Flex flexWrap={'wrap'} flexDirection={{base:'column', md:'row'}}  gap={2} justify={'space-between'}   mt={2}
+     w={'100%'} 
+     >
     {APIdata && APIdata.map(apiData=>{
         return <APICard apiData={apiData} />
     })}
         
     </Flex>
-    </VStack>
+   
+   
+   
     
   )
 }
