@@ -1,7 +1,8 @@
 import { HStack, IconButton, Input } from '@chakra-ui/react'
-import React from 'react'
+import React, { useEffect } from 'react'
 import { FaSearch } from 'react-icons/fa'
 function Searchbar() {
+  
   return (
     <HStack gap={1} justify={'center'} w={'80%'}  mt={8}>
     <Input 

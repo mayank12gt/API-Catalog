@@ -3,6 +3,8 @@ import React from 'react'
 import Categories from './Categories';
 
 function Sidebar(props) {
+
+  
   return (
     <VStack
    

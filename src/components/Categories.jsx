@@ -7,7 +7,7 @@ function Categories(props) {
   return (
     <Box><Heading ml={3} color={'green.900'} size={'md'} fontWeight={'semibold'}> Categories </Heading>
     { categories.map((category)=>{
-     return <CategoryItem category={category}/>
+     return <CategoryItem category={category} onClose={props.onClose}/>
     }) }</Box>
   )
 }

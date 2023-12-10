@@ -38,7 +38,7 @@ function Navbar(props) {
           display: 'none', // Hide the scrollbar for WebKit browsers (Chrome, Safari, etc.)
         },
       }}>
-          <Categories categories={props.categories}/>
+          <Categories categories={props.categories} onClose={sideDrawer.onClose}/>
         </DrawerBody>
       </DrawerContent>
     </Drawer>
