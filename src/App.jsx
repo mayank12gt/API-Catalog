@@ -50,8 +50,12 @@ function App() {
              <APIContainer/>}/>
              <Route path='/category/:categoryName' element={
              <APIContainer />}/>
-        </Routes>
+       
         
+        
+             <Route path='/search/:searchQuery' element={
+             <APIContainer />}/>
+        </Routes>
     
      </VStack>
       </VStack>

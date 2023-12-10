@@ -8,18 +8,20 @@ function APIContainer() {
 
   const {categoryName} = useParams()
   console.log(categoryName)
+  const {searchQuery} = useParams()
+  console.log(searchQuery)
         
     const [APIdata, setAPIdata] = useState([])
     useEffect(()=>{
       
        getAPIs()
        
-    },[categoryName])
+    },[categoryName,searchQuery])
     
     const getAPIs = ()=>{
       console.log('sending apis get request')
-      console.log(`https://api.publicapis.org/entries?category=${categoryName==null?'':categoryName}`)
-      axios.get(`https://api.publicapis.org/entries?category=${categoryName==null?'':categoryName}`).
+      console.log(`https://api.publicapis.org/entries?category=${categoryName==null?'':categoryName}&title=${searchQuery==null?'':searchQuery}`)
+      axios.get(`https://api.publicapis.org/entries?category=${categoryName==null?'':categoryName}&title=${searchQuery==null?'':searchQuery}`).
       then((res)=>{
         setAPIdata(res.data.entries)
       }).
