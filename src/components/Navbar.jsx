@@ -10,7 +10,7 @@ function Navbar(props) {
     const sideDrawer = useDisclosure()
     
   return (
-    <Flex flexWrap={'wrap'}  alignItems={'center'} p={3}   borderBottomWidth={'1px'} borderBottomColor={'gray.200'}>
+    <Flex4 flexWrap={'wrap'}  alignItems={'center'} p={3}   borderBottomWidth={'1px'} borderBottomColor={'gray.200'}>
       <IconButton display={{md:'none'}} onClick={sideDrawer.onOpen}  color='blue.700' size={'lg'} variant={'subtle'} icon={<CiMenuBurger/>}/>
       <Spacer/>
       <Heading display={{md:'none'}} textAlign={'center'} color={'green.600'} mx={2} size={'xl'} fontWeight={'bold'}>API Catalog</Heading>
